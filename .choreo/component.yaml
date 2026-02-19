@@ -1,0 +1,6 @@
+schemaVersion: 1.0
+endpoints:
+- name: observer-api
+  service:
+    port: 4010
+  type: REST
