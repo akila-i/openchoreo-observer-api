@@ -522,13 +522,9 @@ components:
         workflowRunName:
           type: string
           description: The OpenChoreo workflow run name to query
-        projectUid:
-          type: string
-          description: The OpenChoreo project UID to query. (TBD -- project/comp names & uids)
-          format: uuid
         workflowRunUid:
           type: string
-          description: The OpenChoreo workflow run UID to query. (TBD -- workflow run pods has this as a label?)
+          description: The OpenChoreo workflow run UID to query
           format: uuid
       required:
       - namespaceName
@@ -662,11 +658,11 @@ components:
       properties:
         type:
           type: string
-          description: The type of query to execute
+          description: The type of query to execute (System Events filtering is TBD)
           enum:
             - component
             - workflow
-            - system (TBD -- what to filter events?)
+            - system
         filters:
           allOf:
             - $ref: '#/components/schemas/CommonQueryFilters'
