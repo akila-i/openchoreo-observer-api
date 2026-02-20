@@ -2,6 +2,7 @@ schemaVersion: 1.2
 endpoints:
 - name: observer-api
   service:
+    basePath: /
     port: 4010
   type: REST
   schemaFilePath: openapi.yaml
